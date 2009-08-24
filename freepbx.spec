@@ -1,6 +1,6 @@
 %define	name	freepbx
 %define	version	2.5.1
-%define	release	1
+%define	release	%mkrel 1
 
 %define	build_postinstall	0
 %define	build_sqlite		1
@@ -12,7 +12,7 @@ Name:		freepbx
 Version:	%{version}
 Release:	%{release}
 License:	GPL
-Group:		Utilities/System
+Group:		System/Servers
 Source:		%{name}-%{version}.tar.gz
 Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
