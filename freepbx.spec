@@ -1,5 +1,5 @@
 %define	name	freepbx
-%define	version	2.5.1
+%define	version	2.5.2
 %define	release	%mkrel 1
 
 %define	build_postinstall	0
@@ -18,7 +18,7 @@ Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
-Patch5:		move-announcements.patch
+#Patch5:		move-announcements.patch
 Patch6:		amportal-conf-sqlite3.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildArch:	noarch
@@ -55,7 +55,7 @@ your phone system.
 # Have to start Asterisk as root before fixing permissions..
 %patch3 -p0
 %patch4 -p0
-%patch5 -p0
+#%patch5 -p0
 %patch6 -p1
 
 %build
@@ -96,8 +96,6 @@ if ! grep -c amportal /etc/rc.local > /dev/null; then
 fi
 
 %else
-service mysqld start
-chkconfig mysqld on
 if ! ${mysqlcmd} --execute "quit" > /dev/null 2>&1; then
 	echo "Failed to connect to mysql with user '${dbuser}' and password '${dbpass}'."
 	exit 1
