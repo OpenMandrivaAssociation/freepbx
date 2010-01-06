@@ -1,5 +1,5 @@
 %define	name	freepbx
-%define	version	2.5.2
+%define	version	2.6.0
 %define	release	%mkrel 1
 
 %define	build_postinstall	0
@@ -13,7 +13,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Servers
-Source:		%{name}-%{version}.tar.gz
+Source:		http://mirror.freepbx.org/%{name}-%{version}.tar.gz
 Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
