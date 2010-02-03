@@ -1,6 +1,6 @@
 %define	name	freepbx
 %define	version	2.6.0
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 %define	build_postinstall	0
 %define	build_sqlite		1
@@ -27,7 +27,7 @@ Requires:	asterisk
 Requires:	apache
 Requires:	apache-mod_php
 Requires:	php-pear-DB
-Requires:	asterisk-sounds-extra
+Requires:	asterisk-extra-sounds
 %if %build_sqlite
 BuildRequires:	sqlite3-tools
 Requires:	asterisk-plugins-sqlite
