@@ -1,6 +1,6 @@
 %define	name	freepbx
-%define	version	2.6.0
-%define	release	%mkrel 2
+%define	version	2.7.0
+%define	release	%mkrel 1
 
 %define	build_postinstall	0
 %define	build_sqlite		1
@@ -18,7 +18,7 @@ Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
-#Patch5:		move-announcements.patch
+Patch5:		freepbx-sqlite3.patch
 Patch6:		amportal-conf-sqlite3.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildArch:	noarch
@@ -55,7 +55,7 @@ your phone system.
 # Have to start Asterisk as root before fixing permissions..
 %patch3 -p0
 %patch4 -p0
-#%patch5 -p0
+%patch5 -R -p1
 %patch6 -p1
 
 %build
