@@ -1,6 +1,6 @@
 %define	name	freepbx
 %define	version	2.7.0
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 %define _requires_exceptions php-asmanager.php
 %define	build_postinstall	0
