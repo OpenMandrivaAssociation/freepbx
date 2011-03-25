@@ -1,6 +1,6 @@
 %define	name	freepbx
-%define	version	2.7.0
-%define	release	%mkrel 3
+%define	version	2.8.1
+%define	release	%mkrel 1
 
 %define _requires_exceptions php-asmanager.php
 %define	build_postinstall	0
@@ -20,7 +20,6 @@ Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
 Patch5:		freepbx-sqlite3.patch
-Patch6:		amportal-conf-sqlite3.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildArch:	noarch
 URL:		http://www.freepbx.org
@@ -57,7 +56,6 @@ your phone system.
 %patch3 -p0
 %patch4 -p0
 %patch5 -R -p1
-%patch6 -p1
 
 %build
 
