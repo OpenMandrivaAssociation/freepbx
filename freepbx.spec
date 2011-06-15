@@ -1,5 +1,5 @@
 %define	name	freepbx
-%define	version	2.8.1
+%define	version	2.9.0
 %define	release	%mkrel 1
 
 %define _requires_exceptions php-asmanager.php
@@ -19,7 +19,6 @@ Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
-Patch5:		freepbx-sqlite3.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildArch:	noarch
 URL:		http://www.freepbx.org
@@ -55,7 +54,6 @@ your phone system.
 # Have to start Asterisk as root before fixing permissions..
 %patch3 -p0
 %patch4 -p0
-%patch5 -R -p1
 
 %build
 
