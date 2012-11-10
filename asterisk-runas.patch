@@ -1,0 +1,11 @@
+--- start_asterisk	2008-08-28 12:23:02.000000000 -0500
++++ start_asterisk	2008-08-28 12:23:32.000000000 -0500
+@@ -40,7 +40,7 @@
+ 		else
+ 			# su - asterisk -c "export PATH=$PATH:/usr/sbin && export LD_LIBRARY_PATH=/usr/local/lib && /usr/sbin/safe_asterisk"
+ 			export LD_LIBRARY_PATH=/usr/local/lib
+-			/usr/sbin/safe_asterisk -U asterisk -G asterisk
++			/usr/sbin/safe_asterisk # -U asterisk -G asterisk
+ 			sleep 5
+ 			check_asterisk
+ 			sleep 1

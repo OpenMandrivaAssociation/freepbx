@@ -1,0 +1,11 @@
+--- amportal.conf	2010-07-03 10:48:04.000000000 +0200
++++ amportal.conf.dlucio	2011-03-25 05:56:11.000000000 +0100
+@@ -75,6 +75,8 @@
+ #
+ AMPDBHOST=localhost
+ AMPDBENGINE=mysql
++AMPDBUSER=freepbx
++AMPDBPASS=fpbx
+ AMPENGINE=asterisk
+ AMPMGRUSER=admin
+ AMPMGRPASS=amp111

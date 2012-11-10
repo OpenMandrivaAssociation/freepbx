@@ -1,0 +1,11 @@
+--- install_amp	2008-07-14 18:09:07.000000000 -0500
++++ install_amp	2008-07-14 18:09:21.000000000 -0500
+@@ -977,7 +977,7 @@
+ if ($install_files)
+ {
+ 	outn("Installing new FreePBX files..");
+-	$check_md5s=true;
++	$check_md5s=false;
+ 	$md5sums = read_md5_file(UPGRADE_DIR."/".$version.".md5");
+ 	list($num_files, $num_copied) = recursive_copy("amp_conf", "", $md5sums);
+ 	if (!is_file("/etc/asterisk/voicemail.conf")) copy("/etc/asterisk/voicemail.conf.template","/etc/asterisk/voicemail.conf");
