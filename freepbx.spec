@@ -149,3 +149,44 @@ rm -rf %{buildroot}
 %endif
 /usr/src/%{name}-%{version}
 
+
+
+%changelog
+* Wed Jun 15 2011 Lonyai Gergely <aleph@mandriva.org> 2.9.0-1mdv2011.0
++ Revision: 685395
+- 2.9.0
+  Drop sqlite patch
+
+* Fri Mar 25 2011 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 2.8.1-1
++ Revision: 648468
+- 2.8.1 for asterisk 1.8
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 2.7.0-3mdv2011.0
++ Revision: 610767
+- rebuild
+
+* Mon Apr 05 2010 Lonyai Gergely <aleph@mandriva.org> 2.7.0-2mdv2010.1
++ Revision: 531529
+- _requires_exceptions php-asmanager.php
+
+* Fri Mar 26 2010 Lonyai Gergely <aleph@mandriva.org> 2.7.0-1mdv2010.1
++ Revision: 527689
+- 2.7.0
+  Bugfix: #58377 - freepbx has unsatisfied requires
+
+* Wed Feb 03 2010 Lonyai Gergely <aleph@mandriva.org> 2.6.0-2mdv2010.1
++ Revision: 499935
+- Fix typo (asterisk-extra-sounds) in Requiements.
+- 2.6.0
+
+* Mon Nov 09 2009 Lonyai Gergely <aleph@mandriva.org> 2.5.2-1mdv2010.1
++ Revision: 463440
+- 2.5.2
+
+* Mon Aug 24 2009 Lonyai Gergely <aleph@mandriva.org> 2.5.1-1mdv2010.0
++ Revision: 420294
+- fix release tag
+- initial packages
+ - TODO: create a init script and integrate to asterisk init solution
+- create freepbx
+
