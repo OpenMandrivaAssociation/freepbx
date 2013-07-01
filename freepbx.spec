@@ -8,7 +8,7 @@
 %{?_with_postinstall:	%global build_postinstall 1}
 %{?_without_sqlite:	%global build_sqlite 0}
 
-Summary:	FreePBX is an easy to use GUI that controls and manages Asterisk
+Summary:	Is an easy to use GUI that controls and manages Asterisk
 Name:		freepbx
 Version:	%{version}
 Release:	%{release}
