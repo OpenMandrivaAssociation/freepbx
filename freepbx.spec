@@ -1,17 +1,13 @@
-%define	name	freepbx
-%define	version	2.9.0
-%define	release	%mkrel 1
-
 %define _requires_exceptions php-asmanager.php
 %define	build_postinstall	0
 %define	build_sqlite		1
 %{?_with_postinstall:	%global build_postinstall 1}
 %{?_without_sqlite:	%global build_sqlite 0}
 
-Summary:	Is an easy to use GUI that controls and manages Asterisk
+Summary:	An easy to use GUI that controls and manages Asterisk
 Name:		freepbx
-Version:	%{version}
-Release:	%{release}
+Version:	2.9.0
+Release:	2
 License:	GPL
 Group:		System/Servers
 Source:		http://mirror.freepbx.org/%{name}-%{version}.tar.gz
@@ -19,7 +15,6 @@ Patch1:		amportal-conf.patch
 Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildArch:	noarch
 URL:		http://www.freepbx.org
 Requires:	asterisk
@@ -58,7 +53,6 @@ your phone system.
 %build
 
 %install
-rm -rf %{buildroot}
 
 # This *really* needs to change at some point.
 mkdir -p %{buildroot}/usr/src/%{name}-%{version}/
@@ -139,7 +133,6 @@ echo "Please install the FreePBX webroot and framework with install_amp script i
 echo "The FreePBX uninstallation procedure is non-existent.  You will need to manually remove left-over files from Apache webroot."
 
 %clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
