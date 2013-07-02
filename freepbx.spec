@@ -1,4 +1,4 @@
-%define _requires_exceptions php-asmanager.php
+%define __noautoreq php-asmanager.php
 %define	build_postinstall	0
 %define	build_sqlite		1
 %{?_with_postinstall:	%global build_postinstall 1}
