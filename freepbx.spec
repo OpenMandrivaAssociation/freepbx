@@ -16,7 +16,7 @@ Patch2:		install-md5check.patch
 Patch3:		asterisk-runas.patch
 Patch4:		ignore-selinux.patch
 BuildArch:	noarch
-URL:		http://www.freepbx.org
+URL:		https://www.freepbx.org
 Requires:	asterisk
 Requires:	apache
 Requires:	apache-mod_php
